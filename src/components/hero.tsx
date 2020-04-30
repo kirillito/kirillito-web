@@ -4,6 +4,7 @@ import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
 import SVG from "./svg"
+import ParticlesBackground from "./particles-background"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import Intro from "../sections/intro"
@@ -25,8 +26,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         <SVG icon="circle" width={6} color="icon_darkest" left="75%" top="10%" />
         <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="45%" top="10%" />
       </UpDownWide>
-      <SVG icon="circle" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />
-      <SVG icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+      <ParticlesBackground color="#ff0000" num={100} bg={true} type="lines" />
       <SVG icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
       <SVG icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
       <SVG icon="upDown" hiddenMobile width={24} color="icon_darker" left="40%" top="80%" />
