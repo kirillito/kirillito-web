@@ -1,38 +1,45 @@
 import { merge } from "theme-ui"
-import { tailwind } from "@theme-ui/presets"
+import { bootstrap } from "@theme-ui/presets"
 
-export default merge(tailwind, {
+const palette = {
+  color1: `#264653`,
+  color2: `#e76f51`,
+  color3: `#2a9d8f`,
+  color4: `#f4a261`,
+  color5: `#e9c46a`,
+  color6: `#269081`,
+}
+
+const paletteLight = {
+  color1: `#BEDADD`,
+  color2: `#6BCEC7`,
+  color3: `#F6E58A`,
+  color4: `#FBCE8C`,
+  color5: `#F3A684`,
+  color6: `#f2f2f2`
+}
+
+export default merge(bootstrap, {
   initialColorModeName: `dark`,
   useCustomProperties: true,
   colors: {
-    primary: tailwind.colors.orange[4],
-    secondary: tailwind.colors.indigo[6],
-    text: tailwind.colors.gray[3],
-    heading: tailwind.colors.white,
-    background: `#141821`,
-    divider: tailwind.colors.gray[8],
-    textMuted: tailwind.colors.gray[5],
-    icon_brightest: tailwind.colors.white,
-    icon_darker: tailwind.colors.gray[7],
-    icon_darkest: tailwind.colors.gray[8],
-    icon_red: tailwind.colors.red[6],
-    icon_blue: tailwind.colors.blue[6],
-    icon_orange: tailwind.colors.orange[5],
-    icon_yellow: tailwind.colors.yellow[5],
-    icon_pink: tailwind.colors.pink[5],
-    icon_purple: tailwind.colors.purple[6],
-    icon_green: tailwind.colors.green[5],
+    primary: palette.color4,
+    secondary: palette.color6,
+    text: bootstrap.colors.white,
+    heading: bootstrap.colors.white,
+    background: palette.color1,
+    divider: palette.color3,
+    textMuted: bootstrap.colors.gray,
+    gradientPrimary: palette.gradient1,
+    gradientSecondary: palette.gradient2,
     modes: {
       light: {
-        text: tailwind.colors.gray[8],
-        heading: tailwind.colors.black,
-        primary: tailwind.colors.orange[7],
-        background: tailwind.colors.gray[1],
-        divider: tailwind.colors.gray[2],
-        textMuted: tailwind.colors.gray[6],
-        icon_brightest: tailwind.colors.gray[2],
-        icon_darker: tailwind.colors.gray[4],
-        icon_darkest: tailwind.colors.gray[6],
+        primary: paletteLight.color4,
+        secondary: paletteLight.color6,
+        text: bootstrap.colors.black,
+        heading: bootstrap.colors.black,
+        background: paletteLight.color1,
+        divider: paletteLight.color3,
       },
     },
   },
@@ -72,7 +79,7 @@ export default merge(tailwind, {
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
-      color: `text`,
+      color: `text`
     },
     blockquote: {
       marginLeft: 0,

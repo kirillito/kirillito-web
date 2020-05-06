@@ -18,8 +18,8 @@ const Divider = ({ speed, offset, factor, bg, fill, clipPath, children, classNam
   <ParallaxLayer
     sx={{
       position: `absolute`,
-      width: `full`,
-      height: `full`,
+      width: `100%`,
+      height: `100%`,
       background: bg,
       backgroundColor: bg,
       "#contact-wave": {
