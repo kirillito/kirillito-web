@@ -15,7 +15,7 @@ const paletteLight = {
   color2: `#6BCEC7`,
   color3: `#F6E58A`,
   color4: `#FBCE8C`,
-  color5: `#F3A684`,
+  color5: `#1B6B5A`,
   color6: `#f2f2f2`
 }
 
@@ -28,10 +28,10 @@ export default merge(bootstrap, {
     text: bootstrap.colors.white,
     heading: bootstrap.colors.white,
     background: palette.color1,
+    borders: palette.color2,
     divider: palette.color3,
+    links: palette.color5,
     textMuted: bootstrap.colors.gray,
-    gradientPrimary: palette.gradient1,
-    gradientSecondary: palette.gradient2,
     modes: {
       light: {
         primary: paletteLight.color4,
@@ -39,7 +39,9 @@ export default merge(bootstrap, {
         text: bootstrap.colors.black,
         heading: bootstrap.colors.black,
         background: paletteLight.color1,
+        borders: paletteLight.color2,
         divider: paletteLight.color3,
+        links: paletteLight.color5
       },
     },
   },
@@ -54,6 +56,9 @@ export default merge(bootstrap, {
     py: [3, 4],
   },
   styles: {
+    a: {
+      color: `links`
+    },
     root: {
       margin: 0,
       padding: 0,
@@ -64,11 +69,11 @@ export default merge(bootstrap, {
       color: `text`,
       backgroundColor: `background`,
       a: {
-        color: `primary`,
+        color: `links`,
         textDecoration: `none`,
         transition: `all 0.3s ease-in-out`,
         "&:hover": {
-          color: `primary`,
+          color: `links`,
           textDecoration: `none`,
         },
       },

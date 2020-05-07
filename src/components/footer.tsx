@@ -30,6 +30,7 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
+        Built with React and Gatsby 👌
       </Flex>
     </Box>
   )

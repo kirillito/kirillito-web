@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/kirillito-web",
   siteMetadata: {
     siteTitle: `Kirill Bredikhin`,
     siteTitleAlt: `Kirill Bredikhin`,

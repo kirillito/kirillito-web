@@ -2,15 +2,20 @@ import { keyframes, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const wave = keyframes`
-  0% {
-    d: path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z");
-  }
-  50% {
-    d: path("M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z");
-  }
-  100% {
-    d: path("M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z");
-  }
+  0% { d: path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z"); }
+  50% { d: path("M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z"); }
+  100% { d: path("M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"); }
+`
+
+const bounceOut = keyframes`
+  0% { box-shadow: 0 0 0 5px var(--box-shadow-color); opacity:1; }
+  10% { box-shadow: 0 0 0 1px var(--box-shadow-color); opacity:1; }
+  20% { box-shadow: 0 0 0 10px var(--box-shadow-color); opacity:1; }
+  30% { box-shadow: 0 0 0 6px var(--box-shadow-color); opacity:1; }
+  40% { box-shadow: 0 0 0 1px var(--box-shadow-color); opacity:1; }
+  50% { box-shadow: 0 0 0 10px var(--box-shadow-color); opacity:1; }
+  75% { box-shadow: 0 0 0 6px var(--box-shadow-color); opacity:1; }
+  100% { box-shadow: 0 0 0 5px var(--box-shadow-color); opacity:1; }
 `
 
 const upDown = keyframes`
@@ -59,4 +64,8 @@ export const UpDownWide = styled.div`
 
 export const waveAnimation = (length: string) => css`
   animation: ${wave} ${length} linear infinite alternate;
+`
+
+export const bounceOutAnimation = (length: string) => css`
+  ${bounceOut} ${length} linear;
 `
