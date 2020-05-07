@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-5a547f5b230d85516e0f.js"
+    "url": "webpack-runtime-8b439cd86049bfb83c41.js"
   },
   {
     "url": "framework-8ade979d0ea7a5c04f12.js"
   },
   {
-    "url": "app-a06dbef2e43195517768.js"
+    "url": "app-f8cb332acf724c62422f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "fa125d65d67e7de98320012144baf282"
+    "revision": "40bc36420a1516afeee330b740efed81"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bcd6122c037dfa6f8ca5.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "cd48c28b97a07f584cf712294b692088"
+    "revision": "5de735fc50c7aab857eecfeec7a5babc"
   },
   {
     "url": "manifest.json",
@@ -145,7 +145,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/kirillito-web/app-a06dbef2e43195517768.js`))) {
+  if (!resources || !(await caches.match(`/kirillito-web/app-f8cb332acf724c62422f.js`))) {
     return await fetch(event.request)
   }
 
