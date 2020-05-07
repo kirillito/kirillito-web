@@ -23,7 +23,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Inner>
         <Box>
           <Flex>
-            <Avatar url="/images/photo.jpg" />
+            <Avatar url="images/photo.jpg" />
           </Flex>
           <Intro />
           </Box>
