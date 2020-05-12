@@ -26,7 +26,6 @@ module.exports = {
       options: {},
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
