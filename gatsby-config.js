@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/kirillito-web",
   siteMetadata: {
     siteTitle: `Kirill Bredikhin`,
     siteTitleAlt: `Kirill Bredikhin`,
@@ -25,7 +26,6 @@ module.exports = {
       options: {},
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,

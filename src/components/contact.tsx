@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 import styled from "@emotion/styled"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
@@ -35,9 +35,39 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
       </div>
     </Divider>
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner>
-        <ContactMDX />
-      </Inner>
+      <span>Stay in touch!</span>
+      <Flex>
+        <div>
+          <a href="https://github.com/kirillito" title="GitHub">
+            <img src="images/github.svg" alt="GitHub logo"
+              sx={{
+                width: 64,
+                height: 64,
+                margin: 6
+              }} />
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/bredikhinkn/" title="LinkedIn">
+            <img src="images/linkedin.svg" alt="LinkedIn logo"
+              sx={{
+                width: 64,
+                height: 64,
+                margin: 6
+              }} />
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/kirillitos/" title="Instagram">
+            <img src="images/instagram.svg" alt="Instagram logo"
+              sx={{
+                width: 64,
+                height: 64,
+                margin: 6
+              }} />
+          </a>
+        </div>
+      </Flex>
       <Footer />
     </Content>
     <Divider speed={0.1} offset={offset} factor={factor}>

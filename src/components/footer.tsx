@@ -18,10 +18,15 @@ const Footer = () => {
       >
         {isDark ? `Light` : `Dark`}
       </button>
-      Copyright &copy; {new Date().getFullYear()}. All rights reserved.
-      <br />
+      <div sx={{
+          fontSize: 1,
+          color: `text`
+        }}>
+        Copyright &copy; {new Date().getFullYear()}. All rights reserved.
+      </div>
       <Flex
         sx={{
+          fontSize: 1,
           justifyContent: `center`,
           alignItems: `center`,
           mt: 3,
@@ -30,6 +35,7 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
+        Built with React and Gatsby 👌
       </Flex>
     </Box>
   )

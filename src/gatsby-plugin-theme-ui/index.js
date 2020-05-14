@@ -8,6 +8,10 @@ const palette = {
   color4: `#f4a261`,
   color5: `#e9c46a`,
   color6: `#269081`,
+  warm: `#e76f51`,
+  warmer: `#f4a261`,
+  cold: `#264653`,
+  colder: `#539D96`,
 }
 
 const paletteLight = {
@@ -15,8 +19,12 @@ const paletteLight = {
   color2: `#6BCEC7`,
   color3: `#F6E58A`,
   color4: `#FBCE8C`,
-  color5: `#F3A684`,
-  color6: `#f2f2f2`
+  color5: `#1B6B5A`,
+  color6: `#f2f2f2`,
+  warm: `#f4a261`,
+  warmer: `#e76f51`,
+  cold: `#2a9d8f`,
+  colder: `#9EF5F4`,
 }
 
 export default merge(bootstrap, {
@@ -28,10 +36,14 @@ export default merge(bootstrap, {
     text: bootstrap.colors.white,
     heading: bootstrap.colors.white,
     background: palette.color1,
+    borders: palette.color2,
     divider: palette.color3,
+    links: palette.color5,
     textMuted: bootstrap.colors.gray,
-    gradientPrimary: palette.gradient1,
-    gradientSecondary: palette.gradient2,
+    warm: palette.warm,
+    warmer: palette.warmer,
+    cold: palette.cold,
+    colder: palette.colder,
     modes: {
       light: {
         primary: paletteLight.color4,
@@ -39,7 +51,13 @@ export default merge(bootstrap, {
         text: bootstrap.colors.black,
         heading: bootstrap.colors.black,
         background: paletteLight.color1,
+        borders: paletteLight.color2,
         divider: paletteLight.color3,
+        links: paletteLight.color5,
+        warm: palette.warm,
+        warmer: palette.warmer,
+        cold: palette.cold,
+        colder: palette.colder,
       },
     },
   },
@@ -54,6 +72,9 @@ export default merge(bootstrap, {
     py: [3, 4],
   },
   styles: {
+    a: {
+      color: `links`
+    },
     root: {
       margin: 0,
       padding: 0,
@@ -64,11 +85,11 @@ export default merge(bootstrap, {
       color: `text`,
       backgroundColor: `background`,
       a: {
-        color: `primary`,
+        color: `links`,
         textDecoration: `none`,
         transition: `all 0.3s ease-in-out`,
         "&:hover": {
-          color: `primary`,
+          color: `links`,
           textDecoration: `none`,
         },
       },

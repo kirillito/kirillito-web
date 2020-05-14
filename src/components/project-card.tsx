@@ -6,10 +6,10 @@ type ProjectCardProps = {
   link: string
   title: string
   children: React.ReactNode
-  bg: string
+  bgSchema: string
 }
 
-const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
+const ProjectCard = ({ link, title, children, bgSchema }: ProjectCardProps) => (
   <a
     href={link}
     target="_blank"
@@ -23,7 +23,15 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       px: 4,
       py: [4, 5],
       color: `white`,
-      background: bg || `none`,
+      background: (theme) => { // `linear-gradient(to right, ${theme.colors.warm} 0%, ${theme.colors.warmer} 100%)` /*{
+        if (bgSchema === 'warm') {
+          return `linear-gradient(to right, ${theme.colors.warm} 0%, ${theme.colors.warmer} 100%)`
+        } else if (bgSchema === 'cold') {
+          return `linear-gradient(to right, ${theme.colors.cold} 0%, ${theme.colors.colder} 100%)`
+        } else {
+          return `none`
+        }
+      },
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
       "&:hover": {
         color: `white !important`,
