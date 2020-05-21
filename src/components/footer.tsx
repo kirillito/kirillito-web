@@ -35,7 +35,7 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
-        Built with React and Gatsby 👌
+        Built with React <img src="images/react.svg" width="40px" /> and Gatsby&nbsp;<img src="images/gatsby.svg" width="26px" />
       </Flex>
     </Box>
   )

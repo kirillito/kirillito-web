@@ -3,20 +3,28 @@ import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Projects from "../components/projects"
+import Menu from "../components/menu"
 import GitHub from "../components/github"
 import About from "../components/about"
 import Contact from "../components/contact"
 
-const IndexPage = () => (
-  <Layout>
-    <Parallax pages={5}>
+const IndexPage = () => {
+  let parallax;
+
+  const scrollTo = (id) => {
+    parallax.scrollTo(id);
+  }
+  
+  return (<Layout>
+    <Menu scrollTo={scrollTo} />
+    <Parallax ref={ref => (parallax = ref)}  pages={5}>
       <Hero offset={0} factor={1} />
       <Projects offset={1} factor={1} />
       <GitHub offset={2} factor={1} />
       <About offset={3} factor={1} />
       <Contact offset={4} factor={1} />
     </Parallax>
-  </Layout>
-)
+  </Layout>);
+}
 
 export default IndexPage

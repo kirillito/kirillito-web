@@ -1,10 +1,27 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+//import { graphql } from "gatsby"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
 
 import { UpDown, UpDownWide } from "../styles/animations"
+
+// const query = graphql` { 
+//   viewer { 
+//     login,
+//     bio,
+//     id,
+//     repositories (first : 8, affiliations: OWNER, orderBy: { field: CREATED_AT, direction: DESC }) {
+//       nodes {
+//         ...repoInfo
+//       },
+//       totalCount
+//     },
+//     name
+//   }
+// }
+// `
 
 const GitHub = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
@@ -26,6 +43,9 @@ const GitHub = ({ offset, factor = 1 }: { offset: number; factor?: number }) => 
           }}
         >
           <h2>GitHub</h2>
+          {
+
+          }
         </div>
       </Inner>
     </Content>
