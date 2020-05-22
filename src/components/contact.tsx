@@ -9,6 +9,7 @@ import { UpDown, UpDownWide, waveAnimation } from "../styles/animations"
 import Footer from "./footer"
 // @ts-ignore
 import ContactMDX from "../sections/contact"
+import SVG from "./svg"
 
 const InnerWave = styled.div`
   path {
@@ -71,13 +72,19 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
       <Footer />
     </Content>
     <Divider speed={0.1} offset={offset} factor={factor}>
-      <UpDown>
-        
+    <UpDown>
+        <SVG icon="star1" hiddenMobile width={8} color="white" left="70%" top="20%" />
+        <SVG icon="star2" width={8} color="white" left="25%" top="5%" />
       </UpDown>
       <UpDownWide>
-
+        <SVG icon="star1" width={12} color="white" left="95%" top="50%" />
+        <SVG icon="star2" width={6} color="white" left="85%" top="15%" />
+        <SVG icon="star1" hiddenMobile width={8} color="white" left="45%" top="10%" />
       </UpDownWide>
-
+      <SVG icon="star1" width={6} color="white" left="4%" top="20%" />
+      <SVG icon="star1" width={12} color="white" left="70%" top="60%" />
+      <SVG icon="star2" width={12} color="white" left="20%" top="30%" />
+      <SVG icon="star2" width={8} color="white" left="80%" top="70%" /> 
     </Divider>
   </div>
 )

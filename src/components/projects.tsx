@@ -7,6 +7,7 @@ import Content from "../elements/content"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import ProjectsMDX from "../sections/projects"
+import SVG from "./svg"
 
 const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
@@ -32,13 +33,26 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
       </Inner>
     </Content>
     <Divider speed={0.1} offset={offset} factor={factor}>
-      <UpDown>
-
+    <UpDown>
+        <SVG icon="star1" width={6} color="white" left="85%" top="75%" />
+        <SVG icon="star2" width={8} color="white" left="70%" top="20%" />
+        <SVG icon="star1" width={8} color="white" left="25%" top="5%" />
+        <SVG icon="star2" hiddenMobile width={24} color="white" left="17%" top="60%" />
       </UpDown>
       <UpDownWide>
-
+        <SVG icon="star1" hiddenMobile width={16} color="white" left="20%" top="90%" />
+        <SVG icon="star1" width={12} color="white" left="90%" top="30%" />
+        <SVG icon="star1" width={16} color="white" left="70%" top="90%" />
+        <SVG icon="star2" hiddenMobile width={16} color="white" left="18%" top="75%" />
+        <SVG icon="star2" width={6} color="white" left="75%" top="10%" />
+        <SVG icon="star2" hiddenMobile width={8} color="white" left="45%" top="10%" />
       </UpDownWide>
-
+      <SVG icon="star1" hiddenMobile width={6} color="white" left="4%" top="20%" />
+      <SVG icon="star1" width={12} color="white" left="80%" top="60%" />
+      <SVG icon="star1" width={6} color="white" left="10%" top="10%" />
+      <SVG icon="star2" width={12} color="white" left="29%" top="26%" />
+      <SVG icon="star2" width={16} color="white" left="75%" top="30%" />
+      <SVG icon="star2" width={8} color="white" left="80%" top="70%" /> 
     </Divider>
   </div>
 )
