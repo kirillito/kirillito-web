@@ -16,11 +16,11 @@ const palette = {
 
 const paletteLight = {
   color1: `#BEDADD`,
-  color2: `#6BCEC7`,
+  color2: `#a0d3ff`,
   color3: `#F6E58A`,
   color4: `#FBCE8C`,
   color5: `#1B6B5A`,
-  color6: `#f2f2f2`,
+  color6: `#a0d3ff`,
   warm: `#f4a261`,
   warmer: `#e76f51`,
   cold: `#2a9d8f`,

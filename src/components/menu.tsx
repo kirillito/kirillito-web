@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from "react"
-import { jsx } from "theme-ui"
+import { jsx, useColorMode } from "theme-ui"
 import styled from "@emotion/styled";
 
 const Menu = ({ scrollTo }) => {
@@ -8,10 +8,12 @@ const Menu = ({ scrollTo }) => {
   const toggleMenu = (e: any) => {
     setMenuMode( !menuMode )
   }
+  const [ colorMode, setColorMode ] = useColorMode();
+  const isDark = colorMode === `dark`;
 
   return (
   <React.Fragment>
-    <nav className={menuMode ? "top-right open" : "top-right"}>
+    <NavigationMenu className={menuMode ? "top-right open" : "top-right"}>
       <a className="disc l1" onClick={() => { scrollTo(4)}}>
         <div>Contacts</div>
       </a>
@@ -27,37 +29,18 @@ const Menu = ({ scrollTo }) => {
       <a className="disc l5 toggle" onClick={toggleMenu}>
         {menuMode ? "Close" : "Menu"}
       </a>
-    </nav>
+    </NavigationMenu>
     <style>
       {`
-        nav {
-          display: block;
-          position: fixed;
-          width: 500px;
-          height: 500px;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          -webkit-transform: translate3d(25px, -25px, 0);
-          transform: translate3d(25px, -25px, 0);
-          -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-          transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-          transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-          transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-          z-index: 10;
-        }
-
-        nav.open {
+        .open {
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
         }
-
-        nav.top-right {
+      
+        .top-right {
           top: -140px;
           right: -140px;
         }
-
         nav a {
           color: black;
         }
@@ -98,7 +81,7 @@ const Menu = ({ scrollTo }) => {
           left: 0px;
           right: 0px;
           bottom: 0px;
-          background: tomato;
+          background: ${isDark ? '#286673' : 'tomato' };
           -webkit-transition-delay: 0s;
           transition-delay: 0s;
         }
@@ -119,7 +102,7 @@ const Menu = ({ scrollTo }) => {
         }
 
         .open .l1:active {
-          background: #803224;
+          background: ${isDark ? '#bf9f3f' : '#803224' };
           color: tomato;
         }
 
@@ -133,7 +116,7 @@ const Menu = ({ scrollTo }) => {
           left: 50px;
           right: 50px;
           bottom: 50px;
-          background: #ff7a39;
+          background: ${isDark ? '#5D837A' : '#ff7a39' };
           -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
         }
@@ -168,7 +151,7 @@ const Menu = ({ scrollTo }) => {
           left: 100px;
           right: 100px;
           bottom: 100px;
-          background: #ff912b;
+          background: ${isDark ? '#93A182' : '#ff912b' };
           -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
         }
@@ -203,7 +186,7 @@ const Menu = ({ scrollTo }) => {
           left: 150px;
           right: 150px;
           bottom: 150px;
-          background: #ffa91c;
+          background: ${isDark ? '#C9BF89' : '#ffa91c' };
           -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
         }
@@ -238,7 +221,7 @@ const Menu = ({ scrollTo }) => {
           left: 200px;
           right: 200px;
           bottom: 200px;
-          background: #ffc00e;
+          background: ${isDark ? '#ffdd91' : '#ffc00e' };
           -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
         }
@@ -272,7 +255,7 @@ const Menu = ({ scrollTo }) => {
           line-height: 100px;
           padding: 0;
           width: 100px;
-          background: gold;
+          background: ${isDark ? '#ffdd91' : 'gold' };
           opacity: 1;
           -webkit-transform: none;
           transform: none;
@@ -304,50 +287,45 @@ const Menu = ({ scrollTo }) => {
   </React.Fragment>
   )}
 
+const NavigationMenu = styled.nav`
+    display: block;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transform: translate3d(25px, -25px, 0);
+    transform: translate3d(25px, -25px, 0);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+    transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+    transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+    transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+    z-index: 10;
+    `
+// const MenuItem = styled.a`
+//     position: absolute;
+//     display: inline-block;
+//     text-align: center;
+//     cursor: pointer;
+//     font: 25px Alegreya Sans, sans-serif;
+//     line-height: 40px;
+//     padding-top: 10px;
+//     border-radius: 250px;
+//     -webkit-transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 200deg);
+//     transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 200deg);
+//     pointer-events: none;
+//     opacity: 0;
+//     cursor: pointer;
+//     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+//     transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+//     transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
+//     transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+//     `;
 
-/*
-const Nav = styled.nav`
-  display: block;
-  position: fixed;
-  top: -140px;
-  right: -140px;
-  width: 500px;
-  height: 500px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate3d(25px, -25px, 0);
-  transform: translate3d(25px, -25px, 0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-`;
-
-const MenuItem = styled.a`
-  position: absolute;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  font: 25px Alegreya Sans, sans-serif;
-  line-height: 40px;
-  padding-top: 10px;
-  border-radius: 250px;
-  -webkit-transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 200deg);
-  transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 200deg);
-  pointer-events: none;
-  opacity: 0;
-  cursor: pointer;
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-`;
-
-const MenuItemL1 = styled(MenuItem)`
-`;
-*/
+// const MenuLevel5 = styled(MenuItem)`
+//`;
 
 
 export default Menu
