@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1d1bb7f9890b9b6e31c0.js"
+    "url": "webpack-runtime-c58f17d2e5307ad3d5a1.js"
   },
   {
-    "url": "framework-8ade979d0ea7a5c04f12.js"
+    "url": "framework-da8c512c6ac568cbc190.js"
   },
   {
-    "url": "app-a202d19f711554ed704c.js"
+    "url": "app-1a77dcc4ba49eacadd2c.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "98acfa9e0580687e53eaaa7e28d014f1"
+    "revision": "b04745b9aa5c48faa4b961db27feba82"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bcd6122c037dfa6f8ca5.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-8301b206a5659756c932.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c0d75cb4176c35d2ac7b125afb261cae"
+    "revision": "2a7aa6c7334af2d0bac6d9a09c84399f"
   },
   {
     "url": "manifest.json",
@@ -145,7 +145,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/kirillito-web/app-a202d19f711554ed704c.js`))) {
+  if (!resources || !(await caches.match(`/kirillito-web/app-1a77dcc4ba49eacadd2c.js`))) {
     return await fetch(event.request)
   }
 
