@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Projects from "../components/projects"
 import Menu from "../components/menu"
-import GitHub from "../components/github"
 import About from "../components/about"
 import Contact from "../components/contact"
 
@@ -19,8 +18,8 @@ const IndexPage = () => {
     <Menu scrollTo={scrollTo} />
     <Parallax ref={ref => (parallax = ref)}  pages={5}>
       <Hero offset={0} factor={1} />
-      <Projects offset={1} factor={2} />      
-      <About offset={3} factor={1} />
+      <About offset={1} factor={1} />
+      <Projects offset={2} factor={2} />
       <Contact offset={4} factor={1} />
     </Parallax>
   </Layout>);

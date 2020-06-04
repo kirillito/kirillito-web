@@ -16,6 +16,7 @@ const ProjectCard = ({ link, title, children, bgSchema }: ProjectCardProps) => (
     rel="noreferrer noopener"
     sx={{
       width: `100%`,
+      maxWidth: 500,
       boxShadow: `lg`,
       position: `relative`,
       textDecoration: `none`,
@@ -40,7 +41,6 @@ const ProjectCard = ({ link, title, children, bgSchema }: ProjectCardProps) => (
       },
     }}
   >
-    <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div
       sx={{
         textTransform: `uppercase`,
@@ -49,10 +49,12 @@ const ProjectCard = ({ link, title, children, bgSchema }: ProjectCardProps) => (
         fontSize: [4, 5],
         fontWeight: `medium`,
         lineHeight: 1,
+        marginBottom: 10
       }}
     >
       {title}
     </div>
+    <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
   </a>
 )
 

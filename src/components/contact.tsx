@@ -39,11 +39,11 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
         </div>
       </Divider>
       <Content speed={0.4} offset={offset} factor={factor}>
-        <span>Stay in touch!</span>
+        <h3>Stay in touch!</h3>
         <Flex>
           <div>
             <a href="https://github.com/kirillito" title="GitHub">
-              <img src="images/github.svg" alt="GitHub logo"
+              <img src={isDark ? "images/github-dark.png" : "images/github-light.png"}  alt="GitHub logo"
                 sx={{
                   width: 64,
                   height: 64,
@@ -53,7 +53,7 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
           </div>
           <div>
             <a href="https://www.linkedin.com/in/bredikhinkn/" title="LinkedIn">
-              <img src="images/linkedin.svg" alt="LinkedIn logo"
+              <img src={isDark ? "images/linkedin-dark.png" : "images/linkedin-light.png"} alt="LinkedIn logo"
                 sx={{
                   width: 64,
                   height: 64,
@@ -62,8 +62,8 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
             </a>
           </div>
           <div>
-            <a href="https://www.instagram.com/kirillitos/" title="Instagram">
-              <img src="images/instagram.svg" alt="Instagram logo"
+            <a href="mailto:bredikhinkn@gmail.com" title="Mail">
+              <img src={isDark ? "images/mail-dark.png" : "images/mail-light.png"} alt="Email icon"
                 sx={{
                   width: 64,
                   height: 64,

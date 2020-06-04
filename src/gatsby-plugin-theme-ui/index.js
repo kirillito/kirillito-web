@@ -3,7 +3,7 @@ import { bootstrap } from "@theme-ui/presets"
 
 const palette = {
   color1: `#264653`,
-  color2: `#e76f51`,
+  borders: `#bf9f3f`,
   color3: `#2a9d8f`,
   color4: `#f4a261`,
   color5: `#e9c46a`,
@@ -16,7 +16,7 @@ const palette = {
 
 const paletteLight = {
   color1: `#BEDADD`,
-  color2: `#a0d3ff`,
+  borders: `#ffa91c`,
   color3: `#F6E58A`,
   color4: `#FBCE8C`,
   color5: `#1B6B5A`,
@@ -36,7 +36,7 @@ export default merge(bootstrap, {
     text: bootstrap.colors.white,
     heading: bootstrap.colors.white,
     background: palette.color1,
-    borders: palette.color2,
+    borders: palette.borders,
     divider: palette.color3,
     links: palette.color5,
     textMuted: bootstrap.colors.gray,
@@ -51,7 +51,7 @@ export default merge(bootstrap, {
         text: bootstrap.colors.black,
         heading: bootstrap.colors.black,
         background: paletteLight.color1,
-        borders: paletteLight.color2,
+        borders: paletteLight.borders,
         divider: paletteLight.color3,
         links: paletteLight.color5,
         warm: palette.warm,

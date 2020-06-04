@@ -17,11 +17,11 @@ const Menu = ({ scrollTo }) => {
       <a className="disc l1" onClick={() => { scrollTo(4)}}>
         <div>Contacts</div>
       </a>
-      <a className="disc l2" onClick={() => { scrollTo(3)}}>
-        <div>About</div>
+      <a className="disc l2" onClick={() => { scrollTo(2)}}>
+        <div>Projects</div>
       </a>
       <a className="disc l3" onClick={() => { scrollTo(1)}}>
-        <div>Projects</div>
+        <div>About</div>
       </a>
       <a className="disc l4" onClick={() => { scrollTo(0)}}>
         <div>Hello</div>

@@ -2,8 +2,8 @@
 import { jsx } from "theme-ui"
 import { bounceOutAnimation } from "../styles/animations"
 
-const Avatar = ({ url }: { url: string }) => (
-    <a href="mailto:bredikhinkn@gmail.com">
+const Avatar = ({ targetLink, url }: { targetLink: string, url: string }) => (
+    <a href={ targetLink } title="Say Hi!">
       <img
         sx={{
           display: `block`,
