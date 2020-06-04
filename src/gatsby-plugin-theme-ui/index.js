@@ -3,7 +3,7 @@ import { bootstrap } from "@theme-ui/presets"
 
 const palette = {
   color1: `#264653`,
-  borders: `#bf9f3f`,
+  borders: `#ffdd91`,
   color3: `#2a9d8f`,
   color4: `#f4a261`,
   color5: `#e9c46a`,

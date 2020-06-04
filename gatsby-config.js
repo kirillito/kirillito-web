@@ -24,6 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {},
+
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
