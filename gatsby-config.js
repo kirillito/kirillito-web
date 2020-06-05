@@ -30,6 +30,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-theme-ui`, 
+    `gatsby-plugin-theme-ui`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-168672345-1",
+      },
+    }
   ],
 }
