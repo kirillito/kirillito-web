@@ -86,7 +86,6 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
             <SVG icon="star1" hiddenMobile width={14} color="white" left="45%" top="10%" />
           </UpDownWide>
           <SVG icon="star1" width={12} color="white" left="4%" top="20%" />
-          <SVG icon="star1" width={18} color="white" left="70%" top="60%" />
           <SVG icon="star2" width={18} color="white" left="20%" top="30%" />
           <SVG icon="star2" width={14} color="white" left="10%" top="60%" /> 
         </Divider>
@@ -102,7 +101,6 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
           <SVG icon="cloud1" hiddenMobile width={68} color="white" left="45%" top="10%" />
         </UpDownWide>
         <SVG icon="cloud1" width={86} color="white" left="4%" top="20%" />
-        <SVG icon="cloud1" width={108} color="white" left="70%" top="60%" />
         <SVG icon="cloud2" width={160} color="white" left="20%" top="30%" />
         <SVG icon="cloud2" width={82} color="white" left="10%" top="60%" /> 
       </Divider>

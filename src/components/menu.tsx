@@ -14,13 +14,13 @@ const Menu = ({ scrollTo }) => {
   return (
   <React.Fragment>
     <NavigationMenu className={menuMode ? "top-right open" : "top-right"}>
-      <a className="disc l1" onClick={() => { scrollTo(4)}}>
+      <a className="disc l1" onClick={() => { scrollTo(4.8)}}>
         <div>Contacts</div>
       </a>
-      <a className="disc l2" onClick={() => { scrollTo(2)}}>
+      <a className="disc l2" onClick={() => { scrollTo(3.2)}}>
         <div>Projects</div>
       </a>
-      <a className="disc l3" onClick={() => { scrollTo(1)}}>
+      <a className="disc l3" onClick={() => { scrollTo(1.4)}}>
         <div>About</div>
       </a>
       <a className="disc l4" onClick={() => { scrollTo(0)}}>

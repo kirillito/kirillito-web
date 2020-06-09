@@ -22,7 +22,7 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
         offset={1.1}
         factor={factor}
       />
-      <Content speed={0.4} offset={offset + 0.2} factor={factor}>
+      <Content speed={0.7} offset={offset } factor={factor}>
         <Inner>
           <div
             sx={{
@@ -39,7 +39,6 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
       {isDark ? 
       <Divider speed={0.1} offset={offset} factor={factor}>
         <UpDown>
-          <SVG icon="star1" width={6} color="white" left="85%" top="75%" />
           <SVG icon="star2" width={8} color="white" left="70%" top="20%" />
           <SVG icon="star1" width={8} color="white" left="25%" top="5%" />
           <SVG icon="star2" hiddenMobile width={24} color="white" left="17%" top="60%" />
@@ -49,21 +48,16 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
           <SVG icon="star1" width={12} color="white" left="90%" top="30%" />
           <SVG icon="star1" width={16} color="white" left="70%" top="90%" />
           <SVG icon="star2" hiddenMobile width={16} color="white" left="18%" top="75%" />
-          <SVG icon="star2" width={6} color="white" left="75%" top="10%" />
-          <SVG icon="star2" hiddenMobile width={8} color="white" left="45%" top="10%" />
         </UpDownWide>
         <SVG icon="star1" hiddenMobile width={6} color="white" left="4%" top="20%" />
         <SVG icon="star1" width={12} color="white" left="80%" top="60%" />
-        <SVG icon="star1" width={6} color="white" left="10%" top="10%" />
         <SVG icon="star2" width={12} color="white" left="29%" top="26%" />
         <SVG icon="star2" width={16} color="white" left="75%" top="30%" />
-        <SVG icon="star2" width={8} color="white" left="80%" top="70%" /> 
       </Divider>
       :
       <Divider speed={0.1} offset={offset} factor={factor}>
         <UpDown>
           <SVG icon="cloud1" width={66} color="white" left="85%" top="75%" />
-          <SVG icon="cloud2" width={88} color="white" left="70%" top="20%" />
           <SVG icon="cloud1" width={98} color="white" left="25%" top="5%" />
           <SVG icon="cloud2" hiddenMobile width={240} color="white" left="17%" top="60%" />
         </UpDown>
@@ -72,12 +66,8 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
           <SVG icon="cloud1" width={124} color="white" left="90%" top="30%" />
           <SVG icon="cloud1" width={180} color="white" left="70%" top="90%" />
           <SVG icon="cloud2" hiddenMobile width={166} color="white" left="18%" top="75%" />
-          <SVG icon="cloud2" width={56} color="white" left="75%" top="10%" />
-          <SVG icon="cloud2" hiddenMobile width={68} color="white" left="45%" top="10%" />
         </UpDownWide>
-        <SVG icon="cloud1" hiddenMobile width={66} color="white" left="4%" top="20%" />
-        <SVG icon="cloud1" width={140} color="white" left="80%" top="60%" />
-        <SVG icon="cloud1" width={76} color="white" left="10%" top="10%" />
+        <SVG icon="cloud1" hiddenMobile width={140} color="white" left="80%" top="60%" />
         <SVG icon="cloud2" width={150} color="white" left="29%" top="26%" />
         <SVG icon="cloud2" width={190} color="white" left="75%" top="30%" />
         <SVG icon="cloud2" width={84} color="white" left="80%" top="70%" /> 
