@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/blog.js"],"names":["BlogPage"],"mappings":"2FAAA,iCAQeA,UANE,WAEf,OAAQ","file":"component---src-pages-blog-js-c876a8df4896945104a2.js","sourcesContent":["import React from \"react\"\r\n\r\nconst BlogPage = () => {\r\n  \r\n  return (<div></div>);\r\n  \r\n}\r\n\r\nexport default BlogPage\r\n"],"sourceRoot":""}
