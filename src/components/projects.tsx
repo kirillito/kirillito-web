@@ -16,8 +16,6 @@ const Projects = ({ offset, factor = 1 }: { offset: number; factor?: number }) =
   return (
     <div>
       <Divider
-        bg="secondary"
-        sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)` }}
         speed={-0.2}
         offset={1.1}
         factor={factor}

@@ -19,7 +19,8 @@ const Avatar = ({ targetLink, url }: { targetLink: string, url: string }) => (
             animationIterationCount: 10
           }
         }} 
-        src={ url } />
+        src={ url }
+        alt="Kirill Bredikhin photo" />
     </a>
 )
 

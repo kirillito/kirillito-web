@@ -1,8 +1,10 @@
 import React from "react"
+import Layout from "../components/layout"
 
 const GameRoomPage = () => {
   
-  return (<div></div>);
+  return (<Layout>
+  </Layout>);
   
 }
 
