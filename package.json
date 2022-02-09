@@ -1,7 +1,7 @@
 {
   "name": "kirillito-web",
   "private": true,
-  "description": "Portfolio web site, Kirill Bredikhin",
+  "description": "Personal web site, Kirill Bredikhin",
   "version": "0.1.0",
   "author": "Kirill Bredikhin <bredikhinkn@gmail.com>",
   "dependencies": {
