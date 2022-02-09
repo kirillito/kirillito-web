@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{nhA8:function(i,n,a){"use strict";a.r(n);var t=a("2A+t");a("qKvR");n.default=function(){return Object(t.c)("div",{sx:{margin:0,padding:0,display:"grid",height:"100%",backgroundColor:"white"}},Object(t.c)("img",{alt:"wedding invitation",src:"../images/aninha-bg.jpg",sx:{maxWidth:"100%",maxHeight:"100vh",margin:"auto",padding:0}}))}}}]);
+//# sourceMappingURL=component---src-pages-aninha-js-cbc8dda71c711349ad32.js.map
