@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{f9D1:function(n,t,u){"use strict";u.r(t);u("q1tI");var c=u("9Dj+"),e=u("qKvR");t.default=function(){return Object(e.d)(c.a,null)}}}]);
+//# sourceMappingURL=component---src-pages-game-room-js-7c0bbd3db14518fb0c87.js.map
