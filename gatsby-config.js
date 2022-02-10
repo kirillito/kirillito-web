@@ -41,6 +41,15 @@ module.exports = {
         // enable ip anonymization
         anonymize: true,
       }
+    },
+    {
+      resolve: `gatsby-plugin-i18n`,
+      options: {
+        langKeyDefault: 'pt',
+        langKeyForNull: 'pt',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
     }
   ],
 }
