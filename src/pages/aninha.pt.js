@@ -7,9 +7,13 @@ class AninhaPage extends React.Component {
     fullName: "",
     email: "",
     numberOfPeople: "",
+    message: "",
+    isError: false,
+    isLoading: false
   };
 
   formCellStyle = {
+    textAlign: 'center',
     margin: 2,
     padding: 2,
     "& input": {
@@ -28,6 +32,18 @@ class AninhaPage extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.setState({
+      isLoading: true
+    })
+
+    if (this.state.fullName === '' || this.state.email === '' || this.state.numberOfPeople === '') {
+      this.setState({
+        message: 'Por favor, preencha todos os espaços',
+        isError: true,
+        isLoading: false
+      });
+      return;
+    }
 
     fetch('https://api.apispreadsheets.com/data/3xKShONVKje8u0Rr/', {
       method: 'POST',
@@ -42,9 +58,29 @@ class AninhaPage extends React.Component {
           numberOfPeople: this.state.numberOfPeople
         }
       })
-    });
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    })
+    .then((response) => {
+      this.setState({
+        message: 'Obrigado! Estamos muito felizes de ter vocês com a gente nesse dia especial!',
+        isError: false,
+        isLoading: false
+      })
 
-    alert('Obrigado! Estamos muito felizes de ter vocês com a gente nesse dia especial!');
+      return response;
+    })
+    .catch(error => {
+      this.setState({
+        message: 'Ocorreu um erro. Por favor recarregue a página e tente novamente mais tarde. Se o problema persistir, você também pode fazer a confirmação através do número de telefone (32) 99962-5556 e falar com a Cláudia do Carimonial',
+        isError: true,
+        isLoading: false
+      });
+    });
   };
 
   render() {
@@ -89,6 +125,7 @@ class AninhaPage extends React.Component {
       }}>RSVP aqui:</span>
       <form onSubmit={this.handleSubmit} sx={{        
         margin: 'auto',
+        width: '100%',
         padding: 0
       }}>
         <div sx={this.formCellStyle}>
@@ -123,12 +160,19 @@ class AninhaPage extends React.Component {
               onChange={this.handleInputChange}
             />
           </label>
-        </div>
+        </div>        
         <div sx={{
           ...this.formCellStyle,
           textAlign: 'center'
           }}>
-          <button type="submit">Submit</button>
+          <button type="submit">{ this.state.isLoading ? <img src="/images/loading.gif" sx={{width:20, height:20}} alt='loading' /> : 'Enviar' } </button>          
+        </div>
+        <div sx={{
+          ...this.formCellStyle,
+          color: this.state.isError ? 'red' : 'green',
+          fontWeight: 600
+        }}>
+          <span>{this.state.message}</span>
         </div>
       </form>
     </div>

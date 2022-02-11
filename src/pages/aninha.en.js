@@ -7,9 +7,13 @@ class AninhaPage extends React.Component {
     fullName: "",
     email: "",
     numberOfPeople: "",
+    message: "",
+    isError: false,
+    isLoading: false
   };
 
   formCellStyle = {
+    textAlign: 'center',
     margin: 2,
     padding: 2,
     "& input": {
@@ -28,6 +32,18 @@ class AninhaPage extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.setState({
+      isLoading: true
+    })
+
+    if (this.state.fullName === '' || this.state.email === '' || this.state.numberOfPeople === '') {
+      this.setState({
+        message: 'Please, fill all the fields',
+        isError: true,
+        isLoading: false
+      });
+      return;
+    }
 
     fetch('https://api.apispreadsheets.com/data/3xKShONVKje8u0Rr/', {
       method: 'POST',
@@ -42,9 +58,29 @@ class AninhaPage extends React.Component {
           numberOfPeople: this.state.numberOfPeople
         }
       })
-    });
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    })
+    .then((response) => {
+      this.setState({
+        message: 'Thank you! We are very happy to spend this very special day with you!',
+        isError: false,
+        isLoading: false
+      })
 
-    alert('Thank you! We are very happy to spend this very special day with you!');
+      return response;
+    })
+    .catch(error => {
+      this.setState({
+        message: 'An error has occured. Please refresh the page and try again later. If the problem persists, you can also RSVP at this phone number: (32)99962-5556 Cláudia Cerimonial',
+        isError: true,
+        isLoading: false
+      });
+    });
   };
 
   render() {
@@ -89,6 +125,7 @@ class AninhaPage extends React.Component {
       }}>RSVP here:</span>
       <form onSubmit={this.handleSubmit} sx={{        
         margin: 'auto',
+        width: '100%',
         padding: 0
       }}>
         <div sx={this.formCellStyle}>
@@ -128,7 +165,14 @@ class AninhaPage extends React.Component {
           ...this.formCellStyle,
           textAlign: 'center'
           }}>
-          <button type="submit">Submit</button>
+          <button type="submit">{ this.state.isLoading ? <img src="/images/loading.gif" sx={{width:20, height:20}} alt='loading' /> : 'Submit' } </button>
+        </div>
+        <div sx={{
+          ...this.formCellStyle,
+          color: this.state.isError ? 'red' : 'green',
+          fontWeight: 600
+        }}>
+          <span>{this.state.message}</span>
         </div>
       </form>
     </div>
