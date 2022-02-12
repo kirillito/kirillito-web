@@ -175,6 +175,22 @@ class AninhaPage extends React.Component {
           <span>{this.state.message}</span>
         </div>
       </form>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
+          href="/documents/Hotels.pdf" 
+          alt="Where stay in Tiradentes (PDF)" 
+          download>
+            Where stay in Tiradentes (PDF)
+        </a>
+      </div>
     </div>
     )};
 }
