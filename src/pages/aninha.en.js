@@ -174,23 +174,7 @@ class AninhaPage extends React.Component {
         }}>
           <span>{this.state.message}</span>
         </div>
-      </form>
-      <div sx={{
-        textAlign: 'center',
-        fontSize: 16,
-        marginBottom: 32
-      }}>
-        <a
-          sx={{
-            color: 'black',
-            textDecoration: 'underline'
-          }} 
-          href="/documents/Hotels.pdf" 
-          alt="Where stay in Tiradentes (PDF)" 
-          download>
-            Where stay in Tiradentes (PDF)
-        </a>
-      </div>
+      </form>      
       <div sx={{
         textAlign: 'center',
         fontSize: 16,
@@ -204,6 +188,22 @@ class AninhaPage extends React.Component {
           href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
           alt="Wedding registry">
             Wedding registry
+        </a>
+      </div>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
+          href="/documents/Hotels.pdf" 
+          alt="Where stay in Tiradentes (PDF)" 
+          download>
+            Where to stay in Tiradentes (PDF)
         </a>
       </div>
     </div>

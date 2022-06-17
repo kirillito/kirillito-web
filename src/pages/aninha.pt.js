@@ -185,10 +185,9 @@ class AninhaPage extends React.Component {
             color: 'black',
             textDecoration: 'underline'
           }} 
-          href="/documents/Sugestões Pousadas Tiradentes.pdf" 
-          alt="Onde ficar em Tiradentes (PDF)" 
-          download>
-            Onde ficar em Tiradentes (PDF)
+          href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
+          alt="Lista de presentes">
+            Lista de presentes
         </a>
       </div>
       <div sx={{
@@ -201,9 +200,10 @@ class AninhaPage extends React.Component {
             color: 'black',
             textDecoration: 'underline'
           }} 
-          href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
-          alt="Lista de presentes">
-            Lista de presentes
+          href="/documents/Sugestões Pousadas Tiradentes.pdf" 
+          alt="Onde ficar em Tiradentes (PDF)" 
+          download>
+            Onde ficar em Tiradentes (PDF)
         </a>
       </div>
     </div>
