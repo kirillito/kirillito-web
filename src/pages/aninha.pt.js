@@ -191,6 +191,21 @@ class AninhaPage extends React.Component {
             Onde ficar em Tiradentes (PDF)
         </a>
       </div>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
+          href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
+          alt="Lista de presentes">
+            Lista de presentes
+        </a>
+      </div>
     </div>
     )};
 }

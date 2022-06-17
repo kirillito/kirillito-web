@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import React from "react"
 
-class AninhaPage extends React.Component {
+class CivilPage extends React.Component {
   state = {
     fullName: "",
     email: "",
@@ -45,7 +45,7 @@ class AninhaPage extends React.Component {
       return;
     }
 
-    fetch('https://api.apispreadsheets.com/data/3xKShONVKje8u0Rr/', {
+    fetch('https://api.apispreadsheets.com/data/KLUVlceUxqpxcmRl/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -76,7 +76,7 @@ class AninhaPage extends React.Component {
     })
     .catch(error => {
       this.setState({
-        message: 'An error has occured. Please refresh the page and try again later. If the problem persists, you can also RSVP at this phone number: (32)99962-5556 Cláudia Cerimonial',
+        message: 'An error has occured. Please refresh the page and try again later. If the problem persists, you can also RSVP at this phone number: (647)471-7860 Ana Paula',
         isError: true,
         isLoading: false
       });
@@ -107,7 +107,7 @@ class AninhaPage extends React.Component {
         }} />
       <img 
         alt="dog"
-        src="/images/vida-en.jpg"
+        src="/images/vida-civil.jpg"
         sx={{
           maxWidth: '100%',
           width: 500,
@@ -122,8 +122,8 @@ class AninhaPage extends React.Component {
         fontSize: 18,
         margin: 'auto',
         padding: 0
-      }}>RSVP here:</span>
-      <form onSubmit={this.handleSubmit} sx={{        
+      }}>RSVP before July 14th:</span>
+      <form onSubmit={this.handleSubmit} sx={{
         margin: 'auto',
         width: '100%',
         padding: 0
@@ -175,39 +175,8 @@ class AninhaPage extends React.Component {
           <span>{this.state.message}</span>
         </div>
       </form>
-      <div sx={{
-        textAlign: 'center',
-        fontSize: 16,
-        marginBottom: 32
-      }}>
-        <a
-          sx={{
-            color: 'black',
-            textDecoration: 'underline'
-          }} 
-          href="/documents/Hotels.pdf" 
-          alt="Where stay in Tiradentes (PDF)" 
-          download>
-            Where stay in Tiradentes (PDF)
-        </a>
-      </div>
-      <div sx={{
-        textAlign: 'center',
-        fontSize: 16,
-        marginBottom: 32
-      }}>
-        <a
-          sx={{
-            color: 'black',
-            textDecoration: 'underline'
-          }} 
-          href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
-          alt="Wedding registry">
-            Wedding registry
-        </a>
-      </div>
     </div>
     )};
 }
 
-export default AninhaPage
+export default CivilPage
