@@ -200,6 +200,21 @@ class AninhaPage extends React.Component {
             color: 'black',
             textDecoration: 'underline'
           }} 
+          href="http://casare.me/KirilleAna" 
+          alt="Our story">
+            Our story
+        </a>
+      </div>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
           href="/documents/Hotels.pdf" 
           alt="Where stay in Tiradentes (PDF)" 
           download>

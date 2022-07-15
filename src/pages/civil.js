@@ -167,14 +167,46 @@ class CivilPage extends React.Component {
           }}>
           <button type="submit">{ this.state.isLoading ? <img src="/images/loading.gif" sx={{width:20, height:20}} alt='loading' /> : 'Submit' } </button>
         </div>
-        <div sx={{
-          ...this.formCellStyle,
-          color: this.state.isError ? 'red' : 'green',
-          fontWeight: 600
-        }}>
-          <span>{this.state.message}</span>
-        </div>
+          {
+            this.state.message && <div sx={{
+              ...this.formCellStyle,
+              color: this.state.isError ? 'red' : 'green',
+              fontWeight: 600
+            }}>
+              <span>{this.state.message}</span>
+            </div>
+          }
       </form>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
+          href="https://en.casare.me/KirilleAna/lista-de-casamento/239672" 
+          alt="Wedding registry">
+            Wedding registry
+        </a>
+      </div>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
+          href="http://casare.me/KirilleAna" 
+          alt="Our story">
+            Our story
+        </a>
+      </div>
     </div>
     )};
 }

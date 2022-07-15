@@ -200,6 +200,21 @@ class AninhaPage extends React.Component {
             color: 'black',
             textDecoration: 'underline'
           }} 
+          href="http://casare.me/KirilleAna" 
+          alt="Nossa história">
+            Nossa história
+        </a>
+      </div>
+      <div sx={{
+        textAlign: 'center',
+        fontSize: 16,
+        marginBottom: 32
+      }}>
+        <a
+          sx={{
+            color: 'black',
+            textDecoration: 'underline'
+          }} 
           href="/documents/Sugestões Pousadas Tiradentes.pdf" 
           alt="Onde ficar em Tiradentes (PDF)" 
           download>
