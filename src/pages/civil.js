@@ -115,68 +115,6 @@ class CivilPage extends React.Component {
           margin: 'auto',
           padding: 0
         }} />
-      <span sx={{
-        maxWidth: '100%',
-        textAlign: "center",
-        color: 'black',
-        fontSize: 18,
-        margin: 'auto',
-        padding: 0
-      }}>RSVP before July 14th:</span>
-      <form onSubmit={this.handleSubmit} sx={{
-        margin: 'auto',
-        width: '100%',
-        padding: 0
-      }}>
-        <div sx={this.formCellStyle}>
-          <label>
-            Full name
-            <input 
-              type="text" 
-              name="fullName" 
-              value={this.state.fullName}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div sx={this.formCellStyle}>
-          <label>
-            Email
-            <input 
-              type="text" 
-              name="email" 
-              value={this.state.email}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div sx={this.formCellStyle}>
-          <label>
-            Number of people coming
-            <input 
-              type="text" 
-              name="numberOfPeople"                
-              value={this.state.numberOfPeople}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div sx={{
-          ...this.formCellStyle,
-          textAlign: 'center'
-          }}>
-          <button type="submit">{ this.state.isLoading ? <img src="/images/loading.gif" sx={{width:20, height:20}} alt='loading' /> : 'Submit' } </button>
-        </div>
-          {
-            this.state.message && <div sx={{
-              ...this.formCellStyle,
-              color: this.state.isError ? 'red' : 'green',
-              fontWeight: 600
-            }}>
-              <span>{this.state.message}</span>
-            </div>
-          }
-      </form>
       <div sx={{
         textAlign: 'center',
         fontSize: 16,
